@@ -19,17 +19,16 @@ public class UIcontroller : MonoBehaviour
     [SerializeField] List<GameObject> _upgrades = new List<GameObject>();
 
     private void Start() {
-        addXP(currentXP);
-        setLevel(2);
-        setHealth(20, 100);
-        setRust(40);
-        setUpgrades("Power UP", "This will do stuff 01", _Testicon, "Power UP2", "This will do stuff 02", _Testicon,"Power UP3", "This will do stuff 03", _Testicon );
+        //addXP(currentXP);
+        //setLevel(2);
+        //setHealth(20, 100);
+        //setRust(40);
+        //setUpgrades("Power UP", "This will do stuff 01", _Testicon, "Power UP2", "This will do stuff 02", _Testicon,"Power UP3", "This will do stuff 03", _Testicon );
     }
 
-    public void addXP(int addXp)
+    public void addXP(float XP)
     {
-        currentXP += addXp;
-        xpBarSlider.value = currentXP;
+        xpBarSlider.value = XP;
     }
 
     public void setLevel(int level)
@@ -37,14 +36,14 @@ public class UIcontroller : MonoBehaviour
         _currentLevelElement.text = "LEVEL " + level.ToString();
     }
 
-    public void setHealth(int setCurrentHealth, int setMaxHealth)
+    public void setHealth(float setCurrentHealth, float setMaxHealth)
     {
-        _healthLevelElement.text = "HEALTH " + setCurrentHealth.ToString() + "/" + setMaxHealth.ToString();
+        _healthLevelElement.text = "HEALTH " + Mathf.FloorToInt(setCurrentHealth).ToString() + "/" + Mathf.FloorToInt(setMaxHealth).ToString();
     }
 
-    public void setRust(int setCurrentRust)
+    public void setRust(float setCurrentRust)
     {
-        _rustElement.text = "RUST METER " + setCurrentRust.ToString() + "/100";
+        _rustElement.text = "RUST METER " + Mathf.FloorToInt(setCurrentRust).ToString() + "/100";
     }
 
     public void setUpgrades(string upgradeTypeText1, string upgradeDesp1, Sprite upgradeIcon1,

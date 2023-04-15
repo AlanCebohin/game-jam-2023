@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: AttackSpeedBoost
   m_EditorClassIdentifier: 
   _name: Attack Speed Boost
-  _description: Your Harpoon will now shoot faster!
-  _thumbNail: {fileID: 0}
+  _description: Your harpoon will shoot faster!
+  _thumbNail: {fileID: 21300000, guid: 62ce0271a6238b748b28acebc74f0840, type: 3}
   _stat: 2

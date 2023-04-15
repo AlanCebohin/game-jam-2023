@@ -4,8 +4,16 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    private float _healthPoints;
-    private float _maxHealthPoints;
+    private float _healthPoints = 100;
+    private float _maxHealthPoints = 100;
+
+    private UIcontroller _UiController;
+
+    private void Awake()
+    {
+        _UiController = GetComponent<PlayerStat>()._UIController;
+        _UiController.setHealth(_healthPoints, _maxHealthPoints);
+    }
 
     public void TakeDamage(float damage)
     {

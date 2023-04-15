@@ -6,9 +6,10 @@ using UnityEngine;
 public class PlayerStat : MonoBehaviour
 {
     [SerializeField] Progression _progression;
+    [SerializeField] UIcontroller _UiController;
 
-    private int _level;
-    private float _rust;
+    private int _level = 0;
+    private float _rust = 0;
 
     private float _rustIncrease = 10;
 
@@ -24,11 +25,16 @@ public class PlayerStat : MonoBehaviour
     private float _healthRegen;
     private int _healthRegenLevel = 0;
 
-    private float _experience;
+    private float _experience = 0;
 
     private int _statMaxLevel = 10;
 
-
+    private void Awake()
+    {
+        _UiController.setLevel(_level);
+        _UiController.setRust(_rust);
+        _UIController.addXP(_experience);
+    }
 
     private void Update()
     {
@@ -50,6 +56,7 @@ public class PlayerStat : MonoBehaviour
     {
         _rust += _rustIncrease - _rustResistance;
         _rustTimer = 0;
+        _UiController.setRust(_rust);
     }
 
     public void UpgradeStat(Stat stat)
@@ -111,5 +118,10 @@ public class PlayerStat : MonoBehaviour
     public float _Experience
     {
         get { return _experience; }
+    }
+
+    public UIcontroller _UIController
+    {
+        get { return _UiController;}
     }
 }
