@@ -8,23 +8,48 @@ public class PlayerStat : MonoBehaviour
     [SerializeField] Progression _progression;
 
     private int _level;
+    private float _rust;
+
+    private float _rustIncrease = 10;
+
+    private float _rustTimer = 0;
+    private float _rustInterval = 20f;
 
     private float _rustResistance;
-    private int _rustResistanceLevel;
+    private int _rustResistanceLevel = 0;
 
-    private float _attackSpeed;
-    private int _attackSpeedLevel;
+    private float _attackSpeed = 10;
+    private int _attackSpeedLevel = 0;
 
     private float _healthRegen;
-    private int _healthRegenLevel;
+    private int _healthRegenLevel = 0;
 
     private float _experience;
 
     private int _statMaxLevel = 10;
 
+
+
+    private void Update()
+    {
+        _rustTimer += Time.deltaTime;
+
+        if (_rustTimer > _rustInterval)
+        {
+            Rusting();
+        }
+    }
+
+
     public void GainExperience(int experienceGained)
     {
         _experience += experienceGained;
+    }
+
+    public void Rusting()
+    {
+        _rust += _rustIncrease - _rustResistance;
+        _rustTimer = 0;
     }
 
     public void UpgradeStat(Stat stat)
@@ -40,6 +65,7 @@ public class PlayerStat : MonoBehaviour
                 {
                     _attackSpeedLevel++;
                 }
+                Debug.Log(stat + " got a boost of" + statBonus + " and is now: " + _attackSpeed + " and has a level of: " + _attackSpeedLevel);
                 break;
             case Stat.HealthRegen:
                 statBonus = _progression.GetStatBonus(stat, _healthRegenLevel);

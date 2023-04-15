@@ -15,16 +15,16 @@ MonoBehaviour:
   _statBonuses:
   - _stat: 2
     _levels:
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
+    - 2
+    - 2
+    - 2
+    - 2
+    - 2
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
   - _stat: 3
     _levels:
     - 0
