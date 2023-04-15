@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
@@ -34,3 +35,29 @@ public class PlayerController : MonoBehaviour
         m_Transform.Rotate(0, rotationAngle, 0.0f, Space.Self);
     }
 }
+=======
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PlayerController : MonoBehaviour
+{
+    //float rotationAngle = Input.GetAxis("Horizontal") * rotationSpeed * Time.deltaTime;
+
+    //Quaternion newRotation = Quaternion.Euler(0, 0, rotationAngle);
+    //rigidbody.MoveRotation(rigidbody.rotation* newRotation);
+
+
+
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
+>>>>>>> 23ef007b5f0580962d79476eecf17a81d7932693
