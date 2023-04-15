@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2312235243560744487
+--- !u!1 &7338269650703051406
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,57 +8,64 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7050658904707258791}
-  - component: {fileID: 7074004884476746010}
-  - component: {fileID: 5112456741415555966}
-  m_Layer: 0
-  m_Name: Spawner
+  - component: {fileID: 2856077034684858985}
+  - component: {fileID: 7208301072419968929}
+  - component: {fileID: 2407769458004641078}
+  m_Layer: 7
+  m_Name: TileSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7050658904707258791
+--- !u!4 &2856077034684858985
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2312235243560744487}
+  m_GameObject: {fileID: 7338269650703051406}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 10, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &7074004884476746010
+--- !u!65 &7208301072419968929
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2312235243560744487}
+  m_GameObject: {fileID: 7338269650703051406}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4, y: 4, z: 4}
+  m_Size: {x: 500, y: 1, z: 500}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5112456741415555966
+--- !u!114 &2407769458004641078
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2312235243560744487}
+  m_GameObject: {fileID: 7338269650703051406}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6213bf4e0ce5dd4bb157990664745d0, type: 3}
+  m_Script: {fileID: 11500000, guid: 7c074c1776c1f5248a4194cd3bd0625f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyTypes:
-  - {fileID: 7737139991150856329, guid: 0b5f89fd3eeb0de4584bd4760ed4fbfe, type: 3}
-  _playerTransform: {fileID: 0}
-  _controller: {fileID: 0}
+  _overlappingColliders: []
+  _halfExtents: {x: 300, y: 0, z: 300}
+  _tiles:
+  - {fileID: 2983080846512598645, guid: 9430c42ac87d0934ea7bb72c2b722de1, type: 3}
+  _spawnRange: 300
+  _tileRance: 0
+  _tileLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  _player: {fileID: 0}
+  _instantiatedTile: {fileID: 0}
