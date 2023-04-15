@@ -9,7 +9,6 @@ public class BulletController : MonoBehaviour
     private GameObject levelLimit;
 
     //[SerializeField] private GameObject arrowImpact; // Particle effect
-    //[SerializeField] private EnemyController enemyController;
     private Transform bulletTransform;
 
     private void Awake()
