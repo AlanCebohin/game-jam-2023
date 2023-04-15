@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2983080846512598601}
   - component: {fileID: 2983080846512598602}
   - component: {fileID: 2983080846512598603}
-  - component: {fileID: 5754784712009804013}
   - component: {fileID: 138257973151565252}
   m_Layer: 6
   m_Name: WaterTile
@@ -85,24 +84,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &5754784712009804013
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2983080846512598645}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c274c91b3718e50479d027497d003cb1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _distanceToPlayer: 0
-  _destroyRange: 1000
-  _spawnerLayer:
-    serializedVersion: 2
-    m_Bits: 128
-  _overlappingColliders: []
 --- !u!65 &138257973151565252
 BoxCollider:
   m_ObjectHideFlags: 0

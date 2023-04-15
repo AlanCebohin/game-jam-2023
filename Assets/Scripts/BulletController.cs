@@ -22,9 +22,9 @@ public class BulletController : MonoBehaviour
         bulletRB.velocity = bulletTransform.forward * bulletSpeed;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (collision.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy"))
         {
             //Instantiate(bulletImpact, bulletTransform.position, Quaternion.identity); // Particle effect
             Destroy(collision.gameObject);
