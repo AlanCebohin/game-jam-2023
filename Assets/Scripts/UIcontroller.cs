@@ -23,7 +23,7 @@ public class UIcontroller : MonoBehaviour
         //setLevel(2);
         //setHealth(20, 100);
         //setRust(40);
-        //setUpgrades("Power UP", "This will do stuff 01", _Testicon, "Power UP2", "This will do stuff 02", _Testicon,"Power UP3", "This will do stuff 03", _Testicon );
+        setUpgrades("Power UP", "This will do stuff 01", _Testicon, "Power UP2", "This will do stuff 02", _Testicon,"Power UP3", "This will do stuff 03", _Testicon );
     }
 
     public void addXP(float XP)
