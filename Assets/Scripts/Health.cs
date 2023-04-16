@@ -35,7 +35,9 @@ public class Health : MonoBehaviour
         if (_healthPoints < _maxHealthPoints)
         {
             _healthPoints = Mathf.Min(_maxHealthPoints, _healthPoints + regeneratedHealth);
+            _UiController.setHealth(_healthPoints, _maxHealthPoints);
         }
+        
     }
 
     public void Die()

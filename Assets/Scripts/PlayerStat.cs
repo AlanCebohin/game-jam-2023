@@ -16,14 +16,16 @@ public class PlayerStat : MonoBehaviour
 
     private float _rustTimer = 0;
     private float _rustInterval = 20f;
+    private float _healthRegenTimer = 0;
+    private float _healthRegenInterval = 5f;
 
-    [SerializeField]  private float _rustResistance;
+    [SerializeField]  private float _rustResistance = 5;
     private int _rustResistanceLevel = 0;
 
     [SerializeField] private float _attackSpeed = 1f;
     private int _attackSpeedLevel = 0;
 
-    [SerializeField] private float _healthRegen;
+    [SerializeField] private float _healthRegen = 10;
     private int _healthRegenLevel = 0;
 
     private float _experience = 0;
@@ -31,20 +33,30 @@ public class PlayerStat : MonoBehaviour
 
     private int _statMaxLevel = 10;
 
+    private Health _health;
+
     private void Awake()
     {
         _UiController.setLevel(_level);
         _UiController.setRust(_rust);
         _UIController.addXP(_experience);
+        _health = GetComponent<Health>();
     }
 
     private void Update()
     {
         _rustTimer += Time.deltaTime;
+        _healthRegenTimer += Time.deltaTime;
 
         if (_rustTimer > _rustInterval)
         {
             Rusting();
+        }
+
+        if (_healthRegenTimer > _healthRegenInterval)
+        {
+            HealthRegen();
+            _healthRegenTimer = 0;
         }
     }
 
@@ -67,6 +79,7 @@ public class PlayerStat : MonoBehaviour
         _level++;
         _UIController.setLevel(_level);
         _upgradePanel.GetReward();
+        _experience = 0;
         _UIController.ResetXP();
     }
 
@@ -75,6 +88,11 @@ public class PlayerStat : MonoBehaviour
         _rust += _rustIncrease - _rustResistance;
         _rustTimer = 0;
         _UiController.setRust(_rust);
+    }
+
+    private void HealthRegen()
+    {
+        _health.RegenHealth(_healthRegen);
     }
 
     public void UpgradeStat(Stat stat)

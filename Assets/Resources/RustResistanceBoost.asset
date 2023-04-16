@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: df8a90218cb0c474daa573a468e1b0f6, type: 3}
-  m_Name: AttackSpeedBoost
+  m_Name: RustResistanceBoost
   m_EditorClassIdentifier: 
-  _name: Attack Speed Boost
-  _description: Your harpoon will shoot faster!
-  _thumbNail: {fileID: 21300000, guid: 932939f550b858440b705e039388c3d6, type: 3}
-  _stat: 2
+  _name: Rust Resistance Boost
+  _description: You will rust slower
+  _thumbNail: {fileID: 21300000, guid: 879f5141b9ade2b458f5dc4cad4474e9, type: 3}
+  _stat: 0
