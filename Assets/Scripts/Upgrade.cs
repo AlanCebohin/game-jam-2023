@@ -11,4 +11,19 @@ public class Upgrade : ScriptableObject
     {
         Debug.Log(_name + " Activated!");
     }
+
+    public string _Name
+    {
+        get { return _name; }
+    }
+
+    public string _Description
+    {
+        get { return _description; }
+    }
+
+    public Sprite _ThumbNail
+    {
+        get { return _thumbNail; }
+    }
 }
