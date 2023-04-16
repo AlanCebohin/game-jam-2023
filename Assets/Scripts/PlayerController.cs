@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     private float rotationAngle = 0.0f;
     private float motionDirection = 0.0f;
 
-    private bool _isMoving;
+    private bool _isMoving = true;
 
     public bool IsMoving { get => _isMoving; set => _isMoving = value; }
 
