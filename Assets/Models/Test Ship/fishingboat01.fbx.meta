@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0c64f98b6ab03a44aa036d5881b8136e
+guid: c8a31fe2cf2f8e74b92ae202e281fbcd
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,23 +7,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Mat.005
-    second: {fileID: 2100000, guid: 20ef133130bde64448fd7b6e86a8931c, type: 2}
+      name: glass
+    second: {fileID: 2100000, guid: 9f8d28fd8a232034d949b27b2ec3821f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Mat.007
-    second: {fileID: 2100000, guid: db334b85abc916847b3a52d2826fec00, type: 2}
+      name: metalShip
+    second: {fileID: 2100000, guid: e2ac2338420fa874eba13be1893b0b33, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Mat.008
-    second: {fileID: 2100000, guid: 47bdd4dc1c3fae9499261d947c62ad3a, type: 2}
+      name: rust.001
+    second: {fileID: 2100000, guid: 7117dd8b8d3e5544593892a1258b3e32, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: WoodTexture
-    second: {fileID: 2100000, guid: fb43e26fca079b14d91e6466ed9f9769, type: 2}
+      name: rustHapoon
+    second: {fileID: 2100000, guid: c98b9335e092f0d4e976297d85541c1e, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
