@@ -24,7 +24,7 @@ namespace FMODUnity
 
         [FormerlySerializedAs("eventReference")]
         [SerializeField]
-        public EventReference EventReference;
+        public EventRef EventReference;
 
         [FormerlySerializedAs("stopType")]
         [SerializeField]
@@ -165,7 +165,7 @@ namespace FMODUnity
         public static event System.EventHandler<EventArgs> GraphStop;
 
         [FormerlySerializedAs("eventReference")]
-        public EventReference EventReference;
+        public EventRef EventReference;
 
         [FormerlySerializedAs("stopType")]
         public STOP_MODE StopType = STOP_MODE.AllowFadeout;

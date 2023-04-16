@@ -421,7 +421,7 @@ namespace FMODUnity
             }
         }
 
-        private static Task GetUpdateEventReferenceTask(EventReference eventReference, string fieldName,
+        private static Task GetUpdateEventReferenceTask(EventRef eventReference, string fieldName,
             string subObjectPath = null)
         {
             if (eventReference.IsNull)
@@ -530,7 +530,7 @@ namespace FMODUnity
                 {
                     oldFields.Add(f);
                 }
-                else if (f.FieldType == typeof(EventReference))
+                else if (f.FieldType == typeof(EventRef))
                 {
                     newFields.Add(f);
                 }
@@ -595,7 +595,7 @@ namespace FMODUnity
 
                     if (newField != null)
                     {
-                        EventReference newValue = (EventReference)newField.GetValue(target);
+                        EventRef newValue = (EventRef)newField.GetValue(target);
 
                         if (newValue.IsNull)
                         {
@@ -630,7 +630,7 @@ namespace FMODUnity
 
                 FieldInfo newField = newFields[0];
 
-                EventReference newValue = (EventReference)newField.GetValue(target);
+                EventRef newValue = (EventRef)newField.GetValue(target);
 
                 if (newValue.IsNull)
                 {
@@ -655,7 +655,7 @@ namespace FMODUnity
             // Check new fields for GUID/path mismatches
             foreach (FieldInfo newField in newFields)
             {
-                EventReference eventReference = (EventReference)newField.GetValue(target);
+                EventRef eventReference = (EventRef)newField.GetValue(target);
 
                 Task updateTask = GetUpdateEventReferenceTask(eventReference, newField.Name, subObjectPath);
                 if (updateTask != null)
@@ -1201,13 +1201,13 @@ namespace FMODUnity
 
                         if (oldField == null || newField == null
                             || !IsEventRef(oldField)
-                            || newField.FieldType != typeof(EventReference))
+                            || newField.FieldType != typeof(EventRef))
                         {
                             return false;
                         }
 
                         string oldValue = oldField.GetValue(target) as string;
-                        EventReference newValue = (EventReference)newField.GetValue(target);
+                        EventRef newValue = (EventRef)newField.GetValue(target);
 
                         return oldValue == value && newValue.IsNull;
                     },
@@ -1223,7 +1223,7 @@ namespace FMODUnity
                         FieldInfo oldField = type.GetField(oldFieldName, DefaultBindingFlags);
                         FieldInfo newField = type.GetField(newFieldName, DefaultBindingFlags);
 
-                        EventReference eventReference = new EventReference() { Path = path };
+                        EventRef eventReference = new EventRef() { Path = path };
 
                         EditorEventRef eventRef = EventManager.EventFromPath(path);
 
@@ -1323,12 +1323,12 @@ namespace FMODUnity
                         System.Type targetType = target.GetType();
                         FieldInfo field = targetType.GetField(data[1], DefaultBindingFlags);
 
-                        if (field == null || field.FieldType != typeof(EventReference))
+                        if (field == null || field.FieldType != typeof(EventRef))
                         {
                             return false;
                         }
 
-                        EventReference value = (EventReference)field.GetValue(target);
+                        EventRef value = (EventRef)field.GetValue(target);
 
                         return value.Path == data[2] && value.Guid.ToString() == data[4];
                     },
@@ -1338,7 +1338,7 @@ namespace FMODUnity
                         System.Type targetType = target.GetType();
                         FieldInfo field = targetType.GetField(data[1], DefaultBindingFlags);
 
-                        EventReference value = (EventReference)field.GetValue(target);
+                        EventRef value = (EventRef)field.GetValue(target);
                         value.Path = data[3];
 
                         field.SetValue(target, value);
@@ -1359,12 +1359,12 @@ namespace FMODUnity
                         System.Type targetType = target.GetType();
                         FieldInfo field = targetType.GetField(data[1], DefaultBindingFlags);
 
-                        if (field == null || field.FieldType != typeof(EventReference))
+                        if (field == null || field.FieldType != typeof(EventRef))
                         {
                             return false;
                         }
 
-                        EventReference value = (EventReference)field.GetValue(target);
+                        EventRef value = (EventRef)field.GetValue(target);
 
                         return value.Guid.ToString() == data[2] && value.Path == data[4];
                     },
@@ -1374,7 +1374,7 @@ namespace FMODUnity
                         System.Type targetType = target.GetType();
                         FieldInfo field = targetType.GetField(data[1], DefaultBindingFlags);
 
-                        EventReference value = (EventReference)field.GetValue(target);
+                        EventRef value = (EventRef)field.GetValue(target);
                         value.Guid = FMOD.GUID.Parse(data[3]);
 
                         field.SetValue(target, value);

@@ -1805,12 +1805,12 @@ namespace FMODUnity
             pathProperty.stringValue = path;
         }
 
-        public static EventReference GetEventReference(this SerializedProperty property)
+        public static EventRef GetEventReference(this SerializedProperty property)
         {
             SerializedProperty pathProperty = property.FindPropertyRelative("Path");
             SerializedProperty guidProperty = property.FindPropertyRelative("Guid");
 
-            return new EventReference() {
+            return new EventRef() {
                 Path = pathProperty.stringValue,
                 Guid = guidProperty.GetGuid(),
             };

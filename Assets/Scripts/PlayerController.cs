@@ -1,4 +1,5 @@
 using UnityEngine;
+using FMODUnity;
 public class PlayerController : MonoBehaviour
 {
     private Transform m_Transform;
@@ -11,9 +12,19 @@ public class PlayerController : MonoBehaviour
 
     public bool IsMoving { get => _isMoving; set => _isMoving = value; }
 
+    [FMODUnity.EventRef]
+    public string fmodEvent;
+    private FMOD.Studio.EventInstance fmodInstance;
+
     private void Awake()
     {
         m_Transform = GetComponent<Transform>();
+    }
+
+    private void Start()
+    {
+        fmodInstance = RuntimeManager.CreateInstance(fmodEvent);
+        fmodInstance.start();
     }
     void Update()
     {
@@ -31,6 +42,7 @@ public class PlayerController : MonoBehaviour
         {
             Move(motionDirection);
             Rotate(rotationAngle);
+            fmodInstance.setParameterByName("IsMoving", _isMoving ? 1 : 0);
         }
     }
     private void Move(float motionDirection)
