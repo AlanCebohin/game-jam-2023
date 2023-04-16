@@ -142,3 +142,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpeed: 50
+  damagePower: 5
+  EnemyImpact: {fileID: 1841387388726096289, guid: fb224c014660cdf4491112acde8754b0, type: 3}

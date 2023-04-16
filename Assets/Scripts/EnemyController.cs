@@ -29,7 +29,7 @@ public class EnemyController : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             collision.gameObject.GetComponent<Health>().TakeDamage(damage);
-            Instantiate(PlayerImpact, transform.position, Quaternion.identity); // Particle effect
+            Instantiate(PlayerImpact, collision.GetContact(0).point, Quaternion.identity); // Particle effect
             Destroy(gameObject);
         }
     }
