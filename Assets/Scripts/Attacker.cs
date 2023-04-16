@@ -72,7 +72,7 @@ public class Attacker : MonoBehaviour
         {
             if (_shootTimer > _rateOfFire)
             {
-                Instantiate(_bulletPrefab, _firingPoint.transform.position, _cannonTransform.rotation);
+                Instantiate(_bulletPrefab, _firingPoint.transform.position, _firingPoint.transform.rotation);
                 _shootTimer = 0;
             }
         }
