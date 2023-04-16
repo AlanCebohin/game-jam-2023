@@ -19,11 +19,15 @@ public class Health : MonoBehaviour
     {
         _healthPoints -= damage;
 
+        _UiController.setHealth(_healthPoints, _maxHealthPoints);
+
         if (_healthPoints <= 0)
         {
             Die();
             GameManager.instance.GameOver();
         }
+
+        Debug.Log("Player took " + damage + "Damage");
     }
 
     public void RegenHealth(float regeneratedHealth)
@@ -38,7 +42,6 @@ public class Health : MonoBehaviour
     {
         GameObject.Find("Player").GetComponent<PlayerController>().IsMoving = false;
         StartCoroutine(Drown());
-        Debug.Log("Player has died");
     }
 
     public float _HealthPoints

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -4272420548215688820}
   - component: {fileID: 6136041273687599832}
   - component: {fileID: -1436290631782186945}
+  - component: {fileID: -5397106890996108528}
   m_Layer: 0
   m_Name: anglefish
   m_TagString: Enemy
@@ -130,3 +131,19 @@ MonoBehaviour:
   experienceReward: 20
   damage: 5
   PlayerImpact: {fileID: 1841387388726096289, guid: 0d164beabd3b1324ab6f16759b9d328f, type: 3}
+--- !u!54 &-5397106890996108528
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1705962820862308622}
+  serializedVersion: 2
+  m_Mass: 100
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 94
+  m_CollisionDetection: 0
