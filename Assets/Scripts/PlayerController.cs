@@ -6,6 +6,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float rotationSpeed = 100.0f;
     private float rotationAngle = 0.0f;
     private float motionDirection = 0.0f;
+
+    private bool _isMoving;
+
+    public bool IsMoving { get => _isMoving; set => _isMoving = value; }
+
     private void Awake()
     {
         m_Transform = GetComponent<Transform>();
@@ -22,8 +27,11 @@ public class PlayerController : MonoBehaviour
     }
     private void UpdatePosition()
     {
-        Move(motionDirection);
-        Rotate(rotationAngle);
+        if (_isMoving == true)
+        {
+            Move(motionDirection);
+            Rotate(rotationAngle);
+        }
     }
     private void Move(float motionDirection)
     {
