@@ -347,7 +347,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _UiController: {fileID: 1226994295}
-  _upgrade: {fileID: 11400000, guid: b766cccfb74cf8a49ab443d5bc457b12, type: 2}
+  _upgrades: []
   _player: {fileID: 868479907}
 --- !u!4 &846613451
 Transform:
@@ -402,6 +402,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _progression: {fileID: 11400000, guid: 22059d82706e5764f92ec0321436354c, type: 2}
   _UiController: {fileID: 1226994295}
+  _upgradePanel: {fileID: 0}
 --- !u!114 &868479911
 MonoBehaviour:
   m_ObjectHideFlags: 0
