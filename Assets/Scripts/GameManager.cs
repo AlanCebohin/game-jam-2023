@@ -6,13 +6,13 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     [SerializeField] private bool isGameOver = false;
-    //public GameObject gameOverPanel;
+    public GameObject gameOverPanel;
 
     private void Awake()
     {
         instance = this;
-        //gameOverPanel = GameObject.Find("GameOverPanel");
-        //gameOverPanel.SetActive(false);
+        gameOverPanel = GameObject.Find("GameOverPanel");
+        gameOverPanel.SetActive(false);
     }
 
     private void Start()
@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
     {
         isGameOver = true;
         GameObject.Find("Player").GetComponent<PlayerController>().IsMoving = false;
-        //gameOverPanel.SetActive(true);
+        gameOverPanel.SetActive(true);
     }
 
     public void LoadScene(string sceneName)

@@ -22,6 +22,7 @@ public class Health : MonoBehaviour
         if (_healthPoints <= 0)
         {
             Die();
+            GameManager.instance.GameOver();
         }
     }
 
