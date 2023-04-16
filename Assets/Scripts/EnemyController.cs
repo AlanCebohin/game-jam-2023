@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+    public float hp;
+    [SerializeField] private float experienceReward;
     [SerializeField] private float damage;
     [SerializeField] private GameObject PlayerImpact; // Particle effect
 
