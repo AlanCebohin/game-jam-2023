@@ -36,6 +36,8 @@ public class Health : MonoBehaviour
 
     public void Die()
     {
+        GameObject.Find("Player").GetComponent<PlayerController>().IsMoving = false;
+        StartCoroutine(Drown());
         Debug.Log("Player has died");
     }
 
@@ -49,5 +51,16 @@ public class Health : MonoBehaviour
     {
         get { return _maxHealthPoints; }
         set { _maxHealthPoints = value; }
+    }
+
+    IEnumerator Drown()
+    {
+        float rotateSpeed = 10f;
+        while (transform.rotation.eulerAngles.x < 90f)
+        {
+            transform.Rotate(Vector3.right * rotateSpeed * Time.deltaTime);
+            yield return null;
+        }
+        Destroy(gameObject);
     }
 }
