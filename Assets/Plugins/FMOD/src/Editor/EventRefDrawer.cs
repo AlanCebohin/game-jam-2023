@@ -6,7 +6,7 @@ using UnityEditor;
 
 namespace FMODUnity
 {
-    [CustomPropertyDrawer(typeof(EventReference))]
+    [CustomPropertyDrawer(typeof(EventRef))]
     public class EventReferenceDrawer : PropertyDrawer
     {
         private static readonly Texture RepairIcon = EditorUtils.LoadImage("Wrench.png");
@@ -43,7 +43,7 @@ namespace FMODUnity
             {
                 HandleDragEvents(position, property);
 
-                EventReference eventReference = property.GetEventReference();
+                EventRef eventReference = property.GetEventReference();
                 EditorEventRef editorEventRef = GetEditorEventRef(eventReference);
 
                 float baseHeight = GetBaseHeight();
@@ -279,7 +279,7 @@ namespace FMODUnity
             GUI.Label(labelRect, new GUIContent(mismatch.Message, WarningIcon));
         }
 
-        private static MismatchInfo GetMismatch(EventReference eventReference, EditorEventRef editorEventRef)
+        private static MismatchInfo GetMismatch(EventRef eventReference, EditorEventRef editorEventRef)
         {
             if (EventManager.GetEventLinkage(eventReference) == EventLinkage.Path)
             {
@@ -345,7 +345,7 @@ namespace FMODUnity
             return property.FindPropertyRelative("Path");
         }
 
-        private static EditorEventRef GetEditorEventRef(EventReference eventReference)
+        private static EditorEventRef GetEditorEventRef(EventRef eventReference)
         {
             if (EventManager.GetEventLinkage(eventReference) == EventLinkage.Path)
             {
@@ -357,7 +357,7 @@ namespace FMODUnity
             }
         }
 
-        private static EditorEventRef GetRenamedEventRef(EventReference eventReference)
+        private static EditorEventRef GetRenamedEventRef(EventRef eventReference)
         {
             if (Settings.Instance.EventLinkage == EventLinkage.Path && !eventReference.Guid.IsNull)
             {
@@ -376,7 +376,7 @@ namespace FMODUnity
         {
             float baseHeight = GetBaseHeight();
 
-            EventReference eventReference = property.GetEventReference();
+            EventRef eventReference = property.GetEventReference();
             EditorEventRef editorEventRef = GetEditorEventRef(eventReference);
 
             if (editorEventRef == null)
