@@ -1,5 +1,185 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8136816264950928302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ship/Sail Loop
+  m_EditorClassIdentifier: 
+  Path: event:/Ship/Sail Loop
+  Guid:
+    Data1: 644842222
+    Data2: 1300934763
+    Data3: -1011679585
+    Data4: 516353625
+  Banks:
+  - {fileID: 9041766285986208519}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -3721314625060589187}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 96055
+--- !u!114 &-6914313033965769586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Monster Noises/Tentacle Slime
+  m_EditorClassIdentifier: 
+  Path: event:/Monster Noises/Tentacle Slime
+  Guid:
+    Data1: 1637157156
+    Data2: 1132098028
+    Data3: -1518028897
+    Data4: 1298440593
+  Banks:
+  - {fileID: 9041766285986208519}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 500
+  Length: 7290
+--- !u!114 &-5188602999005338042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Desktop/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: SoundBanks/Desktop/Master.strings.bank
+  Name: Desktop/Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638172537445356205
+  FileSizes:
+  - Name: 
+    Value: 1410
+  Exists: 1
+--- !u!114 &-4667454758057672209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Weapons/Impact
+  m_EditorClassIdentifier: 
+  Path: event:/Weapons/Impact
+  Guid:
+    Data1: -244481885
+    Data2: 1192084517
+    Data3: 1571159993
+    Data4: -1186475532
+  Banks:
+  - {fileID: 9041766285986208519}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 500
+  Length: 800
+--- !u!114 &-3721314625060589187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Sail Loop/IsMoving
+  m_EditorClassIdentifier: 
+  Name: IsMoving
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 120713712
+    data2: 4247358919
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-1520461859869434570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Monster Noises/Anglerfish Growls
+  m_EditorClassIdentifier: 
+  Path: event:/Monster Noises/Anglerfish Growls
+  Guid:
+    Data1: 1815143930
+    Data2: 1118034756
+    Data3: 1319791290
+    Data4: -810355608
+  Banks:
+  - {fileID: 9041766285986208519}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 550
+  Length: 3000
+--- !u!114 &-404167574327192978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Monster Noises/Tenctacle Screech
+  m_EditorClassIdentifier: 
+  Path: event:/Monster Noises/Tenctacle Screech
+  Guid:
+    Data1: 1340897341
+    Data2: 1151431516
+    Data3: -2079238727
+    Data4: 1196121694
+  Banks:
+  - {fileID: 9041766285986208519}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 500
+  Length: 5000
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12,10 +192,233 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
-  EditorBanks: []
-  EditorEvents: []
+  EditorBanks:
+  - {fileID: -5188602999005338042}
+  - {fileID: 9041766285986208519}
+  EditorEvents:
+  - {fileID: 5780518207058897212}
+  - {fileID: -6914313033965769586}
+  - {fileID: -404167574327192978}
+  - {fileID: 3878117402369686272}
+  - {fileID: 1342275184980204533}
+  - {fileID: 3108318694783124811}
+  - {fileID: -4667454758057672209}
+  - {fileID: 8831335242076575371}
+  - {fileID: 912832520665048597}
+  - {fileID: -8136816264950928302}
+  - {fileID: 4951986405109815078}
+  - {fileID: -1520461859869434570}
   EditorParameters: []
-  MasterBanks: []
-  StringsBanks: []
-  cacheTime: 0
+  MasterBanks:
+  - {fileID: 9041766285986208519}
+  StringsBanks:
+  - {fileID: -5188602999005338042}
+  cacheTime: 638172537445356205
   cacheVersion: 131603
+--- !u!114 &912832520665048597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Upgrades/Rust
+  m_EditorClassIdentifier: 
+  Path: event:/Upgrades/Rust
+  Guid:
+    Data1: -755783955
+    Data2: 1089528610
+    Data3: -1658852696
+    Data4: -1386579593
+  Banks:
+  - {fileID: 9041766285986208519}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1586
+--- !u!114 &1342275184980204533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Upgrades/Health
+  m_EditorClassIdentifier: 
+  Path: event:/Upgrades/Health
+  Guid:
+    Data1: 1847719563
+    Data2: 1214937903
+    Data3: 155433631
+    Data4: 175912697
+  Banks:
+  - {fileID: 9041766285986208519}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3582
+--- !u!114 &3108318694783124811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Monster Noises/Slosh
+  m_EditorClassIdentifier: 
+  Path: event:/Monster Noises/Slosh
+  Guid:
+    Data1: -498283377
+    Data2: 1091116312
+    Data3: 1122795143
+    Data4: 2106128165
+  Banks:
+  - {fileID: 9041766285986208519}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 850
+  Length: 2031
+--- !u!114 &3878117402369686272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Weapons/Harpoon
+  m_EditorClassIdentifier: 
+  Path: event:/Weapons/Harpoon
+  Guid:
+    Data1: 1878808649
+    Data2: 1182153990
+    Data3: -812046698
+    Data4: 939572763
+  Banks:
+  - {fileID: 9041766285986208519}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 700
+--- !u!114 &4951986405109815078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Upgrades/Weapon
+  m_EditorClassIdentifier: 
+  Path: event:/Upgrades/Weapon
+  Guid:
+    Data1: -940242185
+    Data2: 1180484485
+    Data3: 1542646199
+    Data4: -666603010
+  Banks:
+  - {fileID: 9041766285986208519}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2282
+--- !u!114 &5780518207058897212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sea Ambience
+  m_EditorClassIdentifier: 
+  Path: event:/Sea Ambience
+  Guid:
+    Data1: -1167710973
+    Data2: 1285079374
+    Data3: 1638620050
+    Data4: 1452934313
+  Banks:
+  - {fileID: 9041766285986208519}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 53111
+--- !u!114 &8831335242076575371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music
+  m_EditorClassIdentifier: 
+  Path: event:/Music
+  Guid:
+    Data1: -2136926245
+    Data2: 1277553839
+    Data3: 583324084
+    Data4: 1129226691
+  Banks:
+  - {fileID: 9041766285986208519}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 356129
+--- !u!114 &9041766285986208519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Desktop/Master.bank
+  m_EditorClassIdentifier: 
+  Path: SoundBanks/Desktop/Master.bank
+  Name: Desktop/Master
+  StudioPath: bank:/Master
+  lastModified: 638172537445288489
+  FileSizes: []
+  Exists: 1

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -1858932540463891062}
   - component: {fileID: -8242528648368847981}
   - component: {fileID: 801908789751474321}
+  - component: {fileID: 5910255402830686776}
   m_Layer: 0
   m_Name: arrow
   m_TagString: Untagged
@@ -132,6 +133,37 @@ CapsuleCollider:
   m_Height: 0.006
   m_Direction: 2
   m_Center: {x: 0.000024678693, y: -0.0000006744812, z: -0.0010776849}
+--- !u!114 &5910255402830686776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3606944336637515081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1878808649
+      Data2: 1182153990
+      Data3: -812046698
+      Data4: 939572763
+    Path: event:/Weapons/Harpoon
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &3945491526494627438
 GameObject:
   m_ObjectHideFlags: 0

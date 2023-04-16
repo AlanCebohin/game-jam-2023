@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 453878830541376600}
   - component: {fileID: 3992042055942262893}
   - component: {fileID: 213414874817028216}
+  - component: {fileID: 921036228702012628}
   m_Layer: 0
   m_Name: EnemyImpact
   m_TagString: Untagged
@@ -4870,3 +4871,34 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &921036228702012628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1841387388726096289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -244481885
+      Data2: 1192084517
+      Data3: 1571159993
+      Data4: -1186475532
+    Path: event:/Weapons/Impact
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 500
