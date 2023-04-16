@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Rust Resistance Boost
   _description: You will rust slower
-  _thumbNail: {fileID: 0}
+  _thumbNail: {fileID: 21300000, guid: 879f5141b9ade2b458f5dc4cad4474e9, type: 3}
   _stat: 0
