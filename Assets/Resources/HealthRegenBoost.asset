@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: df8a90218cb0c474daa573a468e1b0f6, type: 3}
-  m_Name: AttackSpeedBoost
+  m_Name: HealthRegenBoost
   m_EditorClassIdentifier: 
-  _name: Attack Speed Boost
-  _description: Your harpoon will shoot faster!
-  _thumbNail: {fileID: 21300000, guid: 932939f550b858440b705e039388c3d6, type: 3}
-  _stat: 2
+  _name: Health Regen Boost
+  _description: You will heal faster!
+  _thumbNail: {fileID: 21300000, guid: 603e453e3f55bb84a84442c641a7cf5e, type: 3}
+  _stat: 3

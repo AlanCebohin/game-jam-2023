@@ -437,6 +437,7 @@ MonoBehaviour:
   _UiController: {fileID: 1226994295}
   _upgrades:
   - {fileID: 11400000, guid: b766cccfb74cf8a49ab443d5bc457b12, type: 2}
+  - {fileID: 11400000, guid: 3d651a311655a9446b1e63d96c326ec8, type: 2}
   _player: {fileID: 868479907}
 --- !u!4 &846613451
 Transform:
@@ -707,6 +708,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7366912551716610979, guid: 3fe0fe0aa3cd3ed4ea2392f60c3ba93d, type: 3}
+      propertyPath: gameOverPanel
+      value: 
+      objectReference: {fileID: 1969636832846917054, guid: 738c13ce2edf309439891fdc8a08de5e, type: 3}
     - target: {fileID: 7366912551716610980, guid: 3fe0fe0aa3cd3ed4ea2392f60c3ba93d, type: 3}
       propertyPath: m_Name
       value: GameManager
