@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class CannonController : MonoBehaviour
@@ -12,7 +13,7 @@ public class CannonController : MonoBehaviour
     [SerializeField] private float shootCounter;
     private bool isShooting = true;
 
-    private GameObject enemy;
+    public List<GameObject> enemies;
 
     // Angular speed in radians per sec.
     public float rotationSpeed = 1.0f;
@@ -34,30 +35,37 @@ public class CannonController : MonoBehaviour
     {
         Aim();
         Shoot();
-
-        enemy = GameObject.FindGameObjectWithTag("Enemy");
     }
 
     private void Aim()
     {
-        if (enemy == null)
+        enemies = UpdateEnemyList.instance.enemies;
+
+        if (enemies == null)
             return;
 
-        float minDistance = float.MaxValue;
+        float minDistance = Mathf.Infinity;
 
-        float distance = Vector3.Distance(m_Transform.position, enemy.transform.position);
-
-        if (distance < minDistance)
+        if (enemies.Count > 0 || enemies != null)
         {
-            // use LookAt to rotate towards the target
-            transform.LookAt(enemy.transform.position);
+
+            foreach (var e in enemies)
+            {
+                float distance = Vector3.Distance(m_Transform.position, e.transform.position);
+
+                if (distance < minDistance)
+                {
+                    // use LookAt to rotate towards the target
+                    transform.LookAt(e.transform.position);
+                }
+            }
         }
 
     }
 
     private void Shoot()
     {
-        if (enemy != null)
+        if (enemies != null)
         {
             if (shootCooldownCounter > 0)
                 shootCooldownCounter -= Time.deltaTime;
