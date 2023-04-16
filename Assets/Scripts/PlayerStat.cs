@@ -9,7 +9,7 @@ public class PlayerStat : MonoBehaviour
     [SerializeField] UIcontroller _UiController;
     [SerializeField] UpgradePanel _upgradePanel;
 
-    private int _level = 0;
+    private int _level = 1;
     private float _rust = 0;
 
     private float _rustIncrease = 10;
@@ -49,16 +49,17 @@ public class PlayerStat : MonoBehaviour
     }
 
 
-    public void GainExperience(int experienceGained)
+    public void GainExperience(float experienceGained)
     {
         _experience += experienceGained;
 
-        if (_experience > _experienceToLevelUp * _level)
+        _UIController.addXP(_experience / _level);
+
+        if (_experience > (_experienceToLevelUp * _level))
         {
             LevelUp();
         }
 
-        _UIController.addXP(_experience);
     }
 
     private void LevelUp()
@@ -66,6 +67,7 @@ public class PlayerStat : MonoBehaviour
         _level++;
         _UIController.setLevel(_level);
         _upgradePanel.GetReward();
+        _UIController.ResetXP();
     }
 
     public void Rusting()

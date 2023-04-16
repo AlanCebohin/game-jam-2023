@@ -32,5 +32,11 @@ public class EnemyController : MonoBehaviour
             Instantiate(PlayerImpact, collision.GetContact(0).point, Quaternion.identity); // Particle effect
             Destroy(gameObject);
         }
+        Debug.Log("Enemy Collided with " + collision.gameObject.name);
+    }
+
+    public float _ExperienceReward
+    {
+        get { return experienceReward; }
     }
 }

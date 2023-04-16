@@ -47,4 +47,10 @@ public class GameManager : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public bool _IsGameOver
+    {
+        get { return isGameOver; }
+        set { isGameOver = value; }
+    }
 }
