@@ -3,6 +3,15 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     [SerializeField] private float damage;
+    [SerializeField] private GameObject PlayerImpact; // Particle effect
+
+    private void Start()
+    {
+        if (PlayerImpact == null)
+        {
+            Debug.LogWarning("PlayerImpact Prefab is empty!");
+        }
+    }
 
     private void OnEnable()
     {
@@ -18,6 +27,7 @@ public class EnemyController : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             collision.gameObject.GetComponent<Health>().TakeDamage(damage);
+            Instantiate(PlayerImpact, collision.transform.position, Quaternion.identity); // Particle effect
             Destroy(gameObject);
         }
     }
