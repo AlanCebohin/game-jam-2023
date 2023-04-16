@@ -72,7 +72,8 @@ public class Attacker : MonoBehaviour
         {
             if (_shootTimer > _rateOfFire)
             {
-                Instantiate(_bulletPrefab, _firingPoint.transform.position, _firingPoint.transform.rotation);
+                GameObject bullet = Instantiate(_bulletPrefab, _firingPoint.transform.position, _firingPoint.transform.rotation);
+                bullet.GetComponent<BulletController>()._Player = this.gameObject;
                 _shootTimer = 0;
             }
         }

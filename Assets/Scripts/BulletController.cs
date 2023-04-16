@@ -12,6 +12,8 @@ public class BulletController : MonoBehaviour
     [SerializeField] private GameObject EnemyImpact; // Particle effect
     private Transform bulletTransform;
 
+    private GameObject _player;
+
     private void Awake()
     {
         bulletRB = GetComponent<Rigidbody>();
@@ -40,6 +42,7 @@ public class BulletController : MonoBehaviour
             }
             else if (enemy.hp <= 0)
             {
+                _player.GetComponent<PlayerStat>().GainExperience(enemy._ExperienceReward);
                 Destroy(collision.gameObject);
             }
             Destroy(gameObject);
@@ -49,5 +52,11 @@ public class BulletController : MonoBehaviour
     private void OnBecameInvisible()
     {
         Destroy(gameObject);
+    }
+
+    public GameObject _Player
+    {
+        get { return _player; }
+        set { _player = value; }
     }
 }

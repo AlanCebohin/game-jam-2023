@@ -31,6 +31,11 @@ public class UIcontroller : MonoBehaviour
         xpBarSlider.value = XP;
     }
 
+    public void ResetXP()
+    {
+        xpBarSlider.value = 0;
+    }
+
     public void setLevel(int level)
     {
         _currentLevelElement.text = "LEVEL " + level.ToString();

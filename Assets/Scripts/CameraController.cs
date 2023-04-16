@@ -6,6 +6,7 @@ public class CameraController : MonoBehaviour
     private Transform playerTransform; // Reference to the player's transform
     [SerializeField] private float distance = 10.0f; // The distance between the camera and the player
     private Vector3 offset; // The offset between the camera and the player
+    private GameManager _gameManager;
 
     private void Awake()
     {
@@ -20,7 +21,10 @@ public class CameraController : MonoBehaviour
 
     void LateUpdate()
     {
-        FollowPlayer();
+        if (!GameManager.instance._IsGameOver)
+        {
+            FollowPlayer();
+        }
     }
 
     private void FollowPlayer()
