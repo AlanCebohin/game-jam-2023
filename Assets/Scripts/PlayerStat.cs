@@ -9,7 +9,7 @@ public class PlayerStat : MonoBehaviour
     [SerializeField] UIcontroller _UiController;
     [SerializeField] UpgradePanel _upgradePanel;
 
-    private int _level = 1;
+    [SerializeField]  private int _level = 1;
     private float _rust = 0;
 
     private float _rustIncrease = 10;
@@ -17,13 +17,13 @@ public class PlayerStat : MonoBehaviour
     private float _rustTimer = 0;
     private float _rustInterval = 20f;
 
-    private float _rustResistance;
+    [SerializeField]  private float _rustResistance;
     private int _rustResistanceLevel = 0;
 
-    private float _attackSpeed = 10;
+    [SerializeField] private float _attackSpeed = 1f;
     private int _attackSpeedLevel = 0;
 
-    private float _healthRegen;
+    [SerializeField] private float _healthRegen;
     private int _healthRegenLevel = 0;
 
     private float _experience = 0;
@@ -85,7 +85,7 @@ public class PlayerStat : MonoBehaviour
         {
             case Stat.AttackSpeed:
                 statBonus = _progression.GetStatBonus(stat, _attackSpeedLevel);
-                _attackSpeed += statBonus;
+                _attackSpeed -= statBonus;
                 if (_attackSpeedLevel < _statMaxLevel)
                 {
                     _attackSpeedLevel++;

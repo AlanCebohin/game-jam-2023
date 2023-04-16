@@ -11,12 +11,17 @@ public class Attacker : MonoBehaviour
     [SerializeField] GameObject _firingPoint;
     [SerializeField] GameObject _bulletPrefab;
     [SerializeField] float _cannonRotationSpeed;
-    [SerializeField] float _rateOfFire = .5f;
     [SerializeField] List<GameObject> _enemyList = new List<GameObject>();
 
     private Transform _target;
     private Quaternion _cannonTargetDirection;
     private float _shootTimer;
+    private PlayerStat _playerStat;
+
+    private void Awake()
+    {
+        _playerStat = GetComponent<PlayerStat>();
+    }
 
     private void Update()
     {
@@ -70,7 +75,7 @@ public class Attacker : MonoBehaviour
     {
         if (_target != null)
         {
-            if (_shootTimer > _rateOfFire)
+            if (_shootTimer > _playerStat._AttackSpeed)
             {
                 GameObject bullet = Instantiate(_bulletPrefab, _firingPoint.transform.position, _firingPoint.transform.rotation);
                 bullet.GetComponent<BulletController>()._Player = this.gameObject;
