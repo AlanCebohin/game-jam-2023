@@ -59,6 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemyTypes:
-  - {fileID: 7737139991150856329, guid: 0b5f89fd3eeb0de4584bd4760ed4fbfe, type: 3}
+  - {fileID: 1907807132771676524, guid: 421dde687e7a5324e939bbb3ec312c22, type: 3}
+  - {fileID: 1705962820862308622, guid: b9fb2c3a0686b8d4b88dd742d8bbd0d1, type: 3}
   _playerTransform: {fileID: 0}
   _controller: {fileID: 0}

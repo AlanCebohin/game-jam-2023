@@ -11,9 +11,12 @@ GameObject:
   - component: {fileID: 2082664728411581364}
   - component: {fileID: 3118961667128042513}
   - component: {fileID: 913157968615887067}
+  - component: {fileID: -4272420548215688820}
+  - component: {fileID: 6136041273687599832}
+  - component: {fileID: -1436290631782186945}
   m_Layer: 0
   m_Name: anglefish
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,3 +86,47 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &-4272420548215688820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1705962820862308622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dda9f2ada9c8f4a4d87f31ea64bae7b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _moveSpeed: 10
+  _rotationSpeed: 200
+  _playerTransform: {fileID: 0}
+--- !u!135 &6136041273687599832
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1705962820862308622}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.04
+  m_Center: {x: -0.0000000059160046, y: 0.01, z: -0.011008093}
+--- !u!114 &-1436290631782186945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1705962820862308622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5074764cfd40e0e44b59963c2c1c99b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 20
+  experienceReward: 20
+  damage: 5
+  PlayerImpact: {fileID: 1841387388726096289, guid: 0d164beabd3b1324ab6f16759b9d328f, type: 3}
