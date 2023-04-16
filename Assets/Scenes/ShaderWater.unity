@@ -510,6 +510,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fishingboat01
       objectReference: {fileID: 0}
+    - target: {fileID: 2107778763808408941, guid: c8a31fe2cf2f8e74b92ae202e281fbcd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cd2356cfc9a7e904bb6f9ee4c16b66ac, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8a31fe2cf2f8e74b92ae202e281fbcd, type: 3}
 --- !u!1 &1636073282
@@ -945,6 +949,50 @@ PrefabInstance:
     - target: {fileID: 4967892196027101974, guid: 5accae7f917bb7648b2374bb1b04540f, type: 3}
       propertyPath: m_Name
       value: CanvasUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 4967892196440816836, guid: 5accae7f917bb7648b2374bb1b04540f, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 221.5139
+      objectReference: {fileID: 0}
+    - target: {fileID: 4967892196440816836, guid: 5accae7f917bb7648b2374bb1b04540f, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 233.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 4967892196440816836, guid: 5accae7f917bb7648b2374bb1b04540f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.9601617
+      objectReference: {fileID: 0}
+    - target: {fileID: 4967892196440816836, guid: 5accae7f917bb7648b2374bb1b04540f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4967892196440816836, guid: 5accae7f917bb7648b2374bb1b04540f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4967892196440816836, guid: 5accae7f917bb7648b2374bb1b04540f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.27944502
+      objectReference: {fileID: 0}
+    - target: {fileID: 4967892196440816836, guid: 5accae7f917bb7648b2374bb1b04540f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000041962
+      objectReference: {fileID: 0}
+    - target: {fileID: 4967892196440816836, guid: 5accae7f917bb7648b2374bb1b04540f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 47
+      objectReference: {fileID: 0}
+    - target: {fileID: 4967892196440816836, guid: 5accae7f917bb7648b2374bb1b04540f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -32.454
+      objectReference: {fileID: 0}
+    - target: {fileID: 4967892196440816891, guid: 5accae7f917bb7648b2374bb1b04540f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 932939f550b858440b705e039388c3d6, type: 3}
+    - target: {fileID: 4967892196833840117, guid: 5accae7f917bb7648b2374bb1b04540f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4967892197482001980, guid: 5accae7f917bb7648b2374bb1b04540f, type: 3}
       propertyPath: m_AnchorMax.x
