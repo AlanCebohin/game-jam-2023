@@ -62,6 +62,8 @@ public class Attacker : MonoBehaviour
 
         Quaternion from = Quaternion.LookRotation(_cannonTransform.forward, _cannonTransform.up);
         _cannonTransform.rotation = Quaternion.RotateTowards(from, _cannonTargetDirection, _cannonRotationSpeed * Time.fixedDeltaTime);
+
+        _firingPoint.transform.LookAt(_target);
     }
 
     private void Shoot()
