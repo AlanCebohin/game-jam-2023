@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+    public float hp;
+    [SerializeField] private float experienceReward;
     [SerializeField] private float damage;
     [SerializeField] private GameObject PlayerImpact; // Particle effect
 
@@ -27,7 +29,7 @@ public class EnemyController : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             collision.gameObject.GetComponent<Health>().TakeDamage(damage);
-            Instantiate(PlayerImpact, collision.transform.position, Quaternion.identity); // Particle effect
+            Instantiate(PlayerImpact, transform.position, Quaternion.identity); // Particle effect
             Destroy(gameObject);
         }
     }

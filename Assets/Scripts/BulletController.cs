@@ -7,6 +7,7 @@ public class BulletController : MonoBehaviour
     private Rigidbody bulletRB;
     [SerializeField] private float bulletSpeed;
     private GameObject levelLimit;
+    [SerializeField] private float damagePower = 5;
 
     [SerializeField] private GameObject EnemyImpact; // Particle effect
     private Transform bulletTransform;
@@ -31,7 +32,16 @@ public class BulletController : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             Instantiate(EnemyImpact, collision.transform.position, Quaternion.identity); // Particle effect
-            Destroy(collision.gameObject);
+            var enemy = collision.gameObject.GetComponent<EnemyController>();
+            
+            if (enemy.hp > 0)
+            {
+                enemy.hp -= damagePower;
+            }
+            else if (enemy.hp <= 0)
+            {
+                Destroy(collision.gameObject);
+            }
             Destroy(gameObject);
         }
     }
